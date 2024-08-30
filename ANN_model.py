@@ -34,6 +34,8 @@ batch_size = 4
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
+
+# Architecture of the ANN model which contains the two fully connected layers as it is linear in nature from initial stage and we do not want to use the flattening layer for ANN's.
 class ANN_Model(nn.Module):
     def __init__(self, input_features=8, hidden1=20, hidden2=20, out_features=2):
         super().__init__()
